@@ -274,6 +274,11 @@ body {
   padding: 3rem 1.5rem;
 }
 
+.content.has-text-justified {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
 .subtitle {
   color: #666;
   font-size: 0.95rem;
