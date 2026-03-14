@@ -13,7 +13,7 @@
 
   <title>COinCO — Fake Detection</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;600;700&family=Castoro&display=swap"
   rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -34,92 +34,29 @@
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            
-            <h1 class="title is-2 publication-title">Common 
-              <!-- Using hexadecimal format -->
-              <span style="color: #BA0C2F;">Inpainted</span> Objects 
-              <span style="color: #BA0C2F;">In-N-Out</span> of Context</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Tianze Yang<sup>1*</sup>,</span>
-              <span class="author-block">Tyson Jordan<sup>1*</sup>,</span>
-              <span class="author-block">Ruitong Sun<sup>1*</sup>,</span>
-              <span class="author-block">Ninghao Liu<sup>2</sup>,</span>
-              <span class="author-block">Jin Sun<sup>1</sup></span>
-            </div>
-            <div class="is-size-6 publication-authors" style="margin-top: 0.3rem;">
-              <span class="author-block"><sup>1</sup>University of Georgia,</span>
-              <span class="author-block"><sup>2</sup>The Hong Kong Polytechnic University</span>
-            </div>
-            <div class="is-size-6 publication-authors">
-              <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
-            </div>
-            <div class="is-size-5 publication-authors" style="margin-top: 0.3rem;">
-              <span class="author-block" style="font-weight: bold;">CVPR 2026 — Supplementary Material</span>
-            </div>
+<section class="hero is-medium hero-gradient">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
+          <a href="index.html" class="back-link">
+            <span class="icon"><i class="fas fa-arrow-left"></i></span>
+            <span>Back to Main Page</span>
+          </a>
 
+          <h1 class="title is-2 publication-title" style="margin-bottom: 0.75rem;">
+            <span class="accent-text"><i class="fas fa-search"></i></span>
+            Fake Detection &amp; Context Enhancement
+          </h1>
+          <p class="subtitle is-5" style="color: #666; margin-bottom: 1.5rem;">
+            SOTA localization results and context-enhanced detection analysis
+          </p>
 
-                      <span class="link-block">
-                        <a href="index.html"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fa-regular fa-file"></i>
-                        </span>
-                        <span>Back to Main Page</span>
-                      </a>
-                    </span>
-                         <!-- Arxiv PDF link -->
-                      <!-- <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span> -->
-
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-                  <!-- Github link -->
-                  <!-- <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span> -->
-
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-            </div>
+          <div style="margin-bottom: 0.5rem;">
+            <span class="tag is-medium is-danger is-light" style="font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.8rem;">COinCO · CVPR 2026</span>
           </div>
+
         </div>
       </div>
     </div>
@@ -127,12 +64,12 @@
 </section>
 
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- Intro -->
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8;">
           <p>
             This page contains additional results on fake detection and context enhancement.
           </p>
@@ -147,11 +84,11 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <!-- Main Title -->
       <div class="columns is-centered">
         <div class="column is-full has-text-centered">
-          <h2 class="title is-3">Fake Detection and Context Enhancement</h2>
+          <h2 class="title is-3 section-title has-text-centered">Fake Detection and Context Enhancement</h2>
         </div>
       </div>
       
@@ -371,26 +308,17 @@
   <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-8 has-text-centered">
         <div class="content">
-
-          <!-- <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p> -->
-
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adopted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>

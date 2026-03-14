@@ -19,7 +19,7 @@
 
   <title>COinCO: Common Inpainted Objects In-N-Out of Context</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;600;700&family=Castoro&display=swap"
   rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -39,90 +39,81 @@
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Common
-              <span style="color: #BA0C2F;">Inpainted</span> Objects
-              <span style="color: #BA0C2F;">In-N-Out</span> of Context</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                Tianze Yang<sup>1*</sup>,</span>
-              <span class="author-block">
-                Tyson Jordan<sup>1*</sup>,</span>
-              <span class="author-block">
-                Ruitong Sun<sup>1*</sup>,</span>
-              <span class="author-block">
-                Ninghao Liu<sup>2</sup>,</span>
-              <span class="author-block">
-                Jin Sun<sup>1</sup></span>
-            </div>
+<!-- Hero / Title -->
+<section class="hero is-medium hero-gradient">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
 
-            <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
-              <span class="author-block"><sup>1</sup>University of Georgia,</span>
-              <span class="author-block"><sup>2</sup>The Hong Kong Polytechnic University</span>
-            </div>
+          <h1 class="title is-1 publication-title" style="margin-bottom: 1rem;">Common
+            <span class="accent-text">Inpainted</span> Objects
+            <span class="accent-text">In-N-Out</span> of Context</h1>
 
-            <div class="is-size-6 publication-authors">
-              <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
-            </div>
-
-            <div class="is-size-5 publication-authors" style="margin-top: 0.3rem;">
-              <span class="author-block" style="font-weight: bold;">CVPR 2026</span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- ArXiv Link -->
-                <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv (Coming Soon)</span>
-                  </a>
-                </span>
-
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/YangTianze009/COinCO" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- Dataset link -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/COinCO" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-database"></i>
-                  </span>
-                  <span>Dataset</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-
+          <div class="is-size-5 publication-authors" style="margin-bottom: 0.5rem;">
+            <span class="author-block">Tianze Yang<sup>1*</sup>,</span>
+            <span class="author-block">Tyson Jordan<sup>1*</sup>,</span>
+            <span class="author-block">Ruitong Sun<sup>1*</sup>,</span>
+            <span class="author-block">Ninghao Liu<sup>2</sup>,</span>
+            <span class="author-block">Jin Sun<sup>1</sup></span>
           </div>
+
+          <div class="is-size-6 publication-authors" style="margin-bottom: 0.25rem;">
+            <span class="author-block"><sup>1</sup>University of Georgia,</span>
+            <span class="author-block"><sup>2</sup>The Hong Kong Polytechnic University</span>
+          </div>
+
+          <div class="is-size-7 publication-authors" style="margin-bottom: 0.75rem;">
+            <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <span class="tag is-medium is-danger is-light" style="font-weight: 600; font-size: 1rem; padding: 0.5rem 1rem;">CVPR 2026</span>
+          </div>
+
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="#" class="external-link button is-medium is-rounded is-dark">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv (Coming Soon)</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://github.com/YangTianze009/COinCO" target="_blank"
+              class="external-link button is-medium is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://huggingface.co/COinCO" target="_blank"
+              class="external-link button is-medium is-rounded is-dark">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 120 120" fill="currentColor" style="vertical-align: middle;">
+                  <path d="M37.5 39.3c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5 8.5-3.8 8.5-8.5-3.8-8.5-8.5-8.5zm0 13c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5zm45 -13c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5 8.5-3.8 8.5-8.5-3.8-8.5-8.5-8.5zm0 13c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5zM60 75c-11 0-20.7-5.6-26.3-14.1-1-1.5.3-3.4 2.1-2.9 5.8 1.6 14.8 3 24.2 3s18.4-1.4 24.2-3c1.8-.5 3.1 1.4 2.1 2.9C80.7 69.4 71 75 60 75z"/>
+                </svg>
+              </span>
+              <span>Dataset &amp; Models</span>
+              </a>
+            </span>
+          </div>
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- Abstract -->
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <h2 class="title is-3 section-title has-text-centered">Abstract</h2>
+        <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8;">
           <p>
              We present Common Inpainted Objects In-N-Out of Context (COinCO), a novel dataset addressing the scarcity of out-of-context examples in existing vision datasets. By systematically replacing objects in COCO images through diffusion-based inpainting, we create 97,722 unique images featuring both contextually coherent and inconsistent scenes, enabling effective context learning. Each inpainted object is meticulously verified and categorized as in- or out-of-context through Large Vision Language Model assessments. Our analysis reveals significant patterns in semantic priors that influence inpainting success across object categories. We demonstrate three key tasks enabled by COinCO: (1) developing a fine-grained context reasoning approach that classifies objects as in- or out-of-context based on three criteria; (2) a novel Objects-from-Context prediction task that determines which new objects naturally belong in given scenes at both instance and clique levels, and (3) context-enhanced fake detection on state-of-the-art methods without fine-tuning. COinCO provides a controlled testbed with contextual variations, establishing a foundation for advancing context-aware visual understanding in computer vision and image forensics.
           </p>
@@ -131,130 +122,130 @@
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <h2 class="title is-3">Example Images from COinCO</h2>
-      </div>
-      <div id="results-carousel" class="carousel results-carousel">
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/4512.png" alt="Inpainted tv example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: tv</h2>
-        </div>
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/20249.png" alt="Inpainted orange example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: orange</h2>
-        </div>
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/46051.png" alt="Inpainted apple example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: apple</h2>
-        </div>
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/4511.png" alt="Inpainted backpack example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: backpack</h2>
-        </div>
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/38796.png" alt="Inpainted cow example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: cow</h2>
-        </div>
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/4382.png" alt="Inpainted suitcase example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: suitcase</h2>
-        </div>
-
-        <div class="item">
-          <div class="has-text-centered">
-            <img src="static/images/56700.png" alt="Inpainted potted plant example" style="display: inline-block;">
-          </div>
-          <h2 class="subtitle has-text-centered">Inpainted object: potted plant</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image carousel -->
-
-
-<!-- Supplementary Material -->
-<section class="section hero is-light">
+<section class="section" style="background: #fafafa;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Supplementary Material</h2>
-    <div class="columns is-centered" style="margin-top: 1rem;">
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="link-block">
-              <a href="inpainting.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
-              <span class="icon"><i class="fa-solid fa-file"></i></span>
-              <span>Inpainting Procedure Details and Analysis</span>
-              </a>
-            </span>
-          </p>
-          <p>
-            <span class="link-block">
-              <a href="additional_pipeline.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
-              <span class="icon"><i class="fa-solid fa-file"></i></span>
-              <span>Additional Pipeline Results</span>
-              </a>
-            </span>
-          </p>
+    <div class="columns is-centered">
+      <h2 class="title is-3 section-title has-text-centered">Example Images from COinCO</h2>
+    </div>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/4512.png" alt="Inpainted tv example" style="display: inline-block;">
         </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>tv</b></h2>
       </div>
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="link-block">
-              <a href="training_details.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
-              <span class="icon"><i class="fa-solid fa-file"></i></span>
-              <span>Context Models &amp; Training Details</span>
-              </a>
-            </span>
-          </p>
-          <p>
-            <span class="link-block">
-              <a href="fake_detection_context.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
-              <span class="icon"><i class="fa-solid fa-file"></i></span>
-              <span>Fake Detection and Context Enhancement</span>
-              </a>
-            </span>
-          </p>
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/20249.png" alt="Inpainted orange example" style="display: inline-block;">
         </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>orange</b></h2>
+      </div>
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/46051.png" alt="Inpainted apple example" style="display: inline-block;">
+        </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>apple</b></h2>
+      </div>
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/4511.png" alt="Inpainted backpack example" style="display: inline-block;">
+        </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>backpack</b></h2>
+      </div>
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/38796.png" alt="Inpainted cow example" style="display: inline-block;">
+        </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>cow</b></h2>
+      </div>
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/4382.png" alt="Inpainted suitcase example" style="display: inline-block;">
+        </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>suitcase</b></h2>
+      </div>
+      <div class="item">
+        <div class="has-text-centered">
+          <img src="static/images/56700.png" alt="Inpainted potted plant example" style="display: inline-block;">
+        </div>
+        <h2 class="subtitle has-text-centered">Inpainted object: <b>potted plant</b></h2>
       </div>
     </div>
   </div>
 </section>
-<!-- End Supplementary Material -->
 
 
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
+<!-- Explore More -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title has-text-centered">Explore More</h2>
+    <p class="has-text-centered" style="color: #666; margin-bottom: 2rem;">Dive deeper into our dataset construction, analysis, and downstream tasks.</p>
+    <div class="columns is-centered is-multiline">
+      <div class="column is-6">
+        <a href="inpainting.html" class="explore-card">
+          <div class="explore-card-inner">
+            <span class="explore-icon"><i class="fas fa-paint-brush"></i></span>
+            <div>
+              <h3 class="explore-card-title">Inpainting Procedure Details</h3>
+              <p class="explore-card-desc">Success rate analysis, object class distributions, and mask size effects.</p>
+            </div>
+            <span class="explore-arrow"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="column is-6">
+        <a href="additional_pipeline.html" class="explore-card">
+          <div class="explore-card-inner">
+            <span class="explore-icon"><i class="fas fa-project-diagram"></i></span>
+            <div>
+              <h3 class="explore-card-title">Additional Pipeline Results</h3>
+              <p class="explore-card-desc">More examples of fine-grained context classification and prediction.</p>
+            </div>
+            <span class="explore-arrow"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="column is-6">
+        <a href="training_details.html" class="explore-card">
+          <div class="explore-card-inner">
+            <span class="explore-icon"><i class="fas fa-cogs"></i></span>
+            <div>
+              <h3 class="explore-card-title">Context Models &amp; Training Details</h3>
+              <p class="explore-card-desc">Model architectures, training procedures, and LVLM prompting strategies.</p>
+            </div>
+            <span class="explore-arrow"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="column is-6">
+        <a href="fake_detection_context.html" class="explore-card">
+          <div class="explore-card-inner">
+            <span class="explore-icon"><i class="fas fa-search"></i></span>
+            <div>
+              <h3 class="explore-card-title">Fake Detection &amp; Context Enhancement</h3>
+              <p class="explore-card-desc">SOTA localization results and context-enhanced detection analysis.</p>
+            </div>
+            <span class="explore-arrow"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX" style="background: #fafafa;">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title is-3 section-title has-text-centered">BibTeX</h2>
     <div style="position: relative;">
-      <button class="button is-small copy-bibtex" style="position: absolute; top: 0.5rem; right: 0.5rem; z-index: 1;">Copy</button>
+      <button class="button is-small copy-bibtex" style="position: absolute; top: 0.75rem; right: 0.75rem; z-index: 1;">
+        <span class="icon is-small"><i class="fas fa-copy"></i></span>
+        <span>Copy</span>
+      </button>
       <pre><code>@inproceedings{yang2026coinco,
   title={Common Inpainted Objects In-N-Out of Context},
   author={Yang, Tianze and Jordan, Tyson and Sun, Ruitong and Liu, Ninghao and Sun, Jin},
@@ -264,17 +255,16 @@
     </div>
   </div>
 </section>
-<!--End BibTex citation -->
 
 
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column is-8 has-text-centered">
         <div class="content">
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adopted from <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
           </p>
         </div>
       </div>
