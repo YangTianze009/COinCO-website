@@ -361,6 +361,54 @@
 </script> -->
 
 
+<!-- Comparison with Modern Image Editing Methods -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <h2 class="title is-3 has-text-centered">Comparison with Modern Image Editing Methods</h2>
+          <p>
+            A key design choice in COinCO is the use of SD2-inpainting over more recent image editing models such as FLUX-fill and QwenImageEdit. While these modern methods produce impressive results for standard image editing tasks, they are optimized to generate semantically coherent content. This is fundamentally at odds with COinCO's requirement to produce both <b>in-context</b> and <b>out-of-context</b> object replacements.
+          </p>
+          <p>
+            Quantitatively, SD2-inpainting achieves an <b>89% in-context</b> and <b>77% out-of-context</b> success rate, whereas FLUX-fill achieves <b>75% in-context</b> but only <b>30% out-of-context</b> success rate. FLUX-fill tends to refuse to inpaint contextually implausible objects, instead replacing the target region with a contextually coherent object. This behavior, while desirable for general image editing, makes it unsuitable for constructing a dataset that requires controlled generation of out-of-context scenes.
+          </p>
+          <p>
+            The figure below illustrates this with a representative example. The task is to replace a <b>donut</b> (red bounding box) with a <b>zebra</b> — an intentionally out-of-context replacement. FLUX-fill refuses to generate the zebra and instead inpaints another donut, maintaining contextual coherence. QwenImageEdit attempts the replacement but produces a low-quality result with incorrect positioning. COinCO (SD2-inpainting) successfully places the zebra in the target region, preserving image quality while achieving the desired out-of-context effect.
+          </p>
+        </div>
+
+        <!-- 4-image comparison -->
+        <div class="columns is-centered is-multiline" style="margin-top: 1.5rem;">
+          <div class="column is-3 has-text-centered">
+            <img src="static/images/comparison/original-1128.png" alt="Original image with donut" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle is-6" style="margin-top: 0.5rem;"><b>Original</b></p>
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="static/images/comparison/FLUX_1128.png" alt="FLUX-fill result" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle is-6" style="margin-top: 0.5rem;"><b>FLUX-fill</b></p>
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="static/images/comparison/QwenImageEdit-1128.png" alt="QwenImageEdit result" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle is-6" style="margin-top: 0.5rem;"><b>QwenImageEdit</b></p>
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="static/images/comparison/COinCO_1128.png" alt="COinCO result" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+            <p class="subtitle is-6" style="margin-top: 0.5rem;"><b>COinCO (Ours)</b></p>
+          </div>
+        </div>
+        <p class="has-text-centered is-size-6" style="margin-top: 0.5rem; color: #555;">
+          <b>Figure 5:</b> Comparison of inpainting results for an out-of-context replacement (donut → zebra). FLUX-fill refuses the out-of-context generation and replaces the donut with another donut. QwenImageEdit produces a low-quality zebra with incorrect positioning. COinCO successfully generates the out-of-context zebra.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Comparison with Modern Image Editing Methods -->
+
+
   <footer class="footer">
   <div class="container">
     <div class="columns is-centered">

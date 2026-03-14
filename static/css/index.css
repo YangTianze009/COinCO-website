@@ -2,7 +2,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;
@@ -11,12 +10,17 @@ body {
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-block a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .dnerf {
   font-variant: small-caps;
 }
-
 
 .teaser .hero-body {
   padding-top: 0;
@@ -27,13 +31,12 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
 .publication-title {
+    font-family: 'Google Sans', sans-serif;
 }
 
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -42,13 +45,6 @@ body {
   top: auto;
   transform: none;
   object-fit: fit;
-}
-
-.publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
@@ -67,9 +63,6 @@ body {
     font-weight: bolder;
 }
 
-.publication-authors {
-}
-
 .publication-authors a {
    color: hsl(204, 86%, 53%) !important;
 }
@@ -82,19 +75,11 @@ body {
   display: inline-block;
 }
 
-.publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
 .publication-video {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-
     overflow: hidden;
     border-radius: 10px !important;
 }
@@ -107,9 +92,7 @@ body {
     height: 100%;
 }
 
-.publication-body img {
-}
-
+/* Carousel */
 .results-carousel {
   overflow: hidden;
 }
@@ -119,6 +102,16 @@ body {
   overflow: hidden;
   padding: 20px;
   font-size: 0;
+}
+
+.results-carousel .item img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.results-carousel .item img:hover {
+  transform: scale(1.02);
 }
 
 .results-carousel video {
@@ -133,6 +126,22 @@ body {
   font-size: smaller;
 }
 
+/* Section images - subtle polish */
+.section img,
+.hero img {
+  border-radius: 6px;
+}
+
+/* Section spacing */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+/* Subtitle captions */
+.subtitle {
+  color: #555;
+}
+
 /* BibTeX section */
 #BibTeX pre {
   text-align: left;
@@ -144,14 +153,18 @@ body {
 
 .copy-bibtex {
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
+.copy-bibtex:hover {
+  background-color: #e8e8e8;
+}
 
+/* Code block styling */
 pre code.language-python {
   font-size: 14px !important;
 }
 
-/* Add this to your CSS file */
 pre code .number,
 pre .number {
     display: inline !important;
@@ -162,5 +175,15 @@ pre .number {
     min-width: 0;
     height: auto;
     background-color: inherit;
-    /* Reset any other Bulma .number properties */
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 1.5rem;
+  background-color: #f5f5f5;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: #777;
 }
