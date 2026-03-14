@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="COinCO: Fake Detection and Context Enhancement">
+  <meta property="og:title" content="COinCO — Fake Detection"/>
+  <meta property="og:description" content="Fake detection and context enhancement results for the COinCO dataset."/>
+  <meta property="og:url" content="https://yangtianze009.github.io/COinCO-website/fake_detection_context.html"/>
+  <meta name="keywords" content="COinCO, fake detection, context enhancement, CVPR 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>COinCO — Fake Detection</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <h1 class="title is-2 publication-title">Common 
+              <!-- Using hexadecimal format -->
+              <span style="color: #BA0C2F;">Inpainted</span> Objects 
+              <span style="color: #BA0C2F;">In-N-Out</span> of Context</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Tianze Yang<sup>1*</sup>,</span>
+              <span class="author-block">Tyson Jordan<sup>1*</sup>,</span>
+              <span class="author-block">Ruitong Sun<sup>1*</sup>,</span>
+              <span class="author-block">Ninghao Liu<sup>2</sup>,</span>
+              <span class="author-block">Jin Sun<sup>1</sup></span>
+            </div>
+            <div class="is-size-6 publication-authors" style="margin-top: 0.3rem;">
+              <span class="author-block"><sup>1</sup>University of Georgia,</span>
+              <span class="author-block"><sup>2</sup>The Hong Kong Polytechnic University</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
+            </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 0.3rem;">
+              <span class="author-block" style="font-weight: bold;">CVPR 2026 — Supplementary Material</span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+
+                      <span class="link-block">
+                        <a href="index.html"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fa-regular fa-file"></i>
+                        </span>
+                        <span>Back to Main Page</span>
+                      </a>
+                    </span>
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <!-- <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            This page contains additional results on fake detection and context enhancement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Main Title -->
+      <div class="columns is-centered">
+        <div class="column is-full has-text-centered">
+          <h2 class="title is-3">Fake Detection and Context Enhancement</h2>
+        </div>
+      </div>
+      
+      <!-- More SOTA Fake Localization Section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h3 class="title is-4 mb-4">SOTA Fake Localization Results</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              We provide additional results of SOTA fake localization methods for inpainting detection, serving as a supplement to Figure 6 in the paper.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- More SOTA Fake Localization Image -->
+      <div id="results-carousel" class="bulma-slider results-slider">
+        <div class="item" style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 80%; max-width: 800px;">
+            <img src="static/images/SOTA localization new.jpg" alt="More SOTA Fake Localization Examples" style="width: 100%; height: auto;"/>
+            <h2 class="subtitle has-text-centered">
+              Inpainting detection across different SOTA models. Left to right: CAT-Net, ManTraNet, Trufor, PSCC-Net.
+            </h2>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Updated SOTA Bar Graph -->
+      <!-- <div id="results-carousel" class="bulma-slider results-slider">
+        <div class="item" style="display: flex; flex-direction: column; align-items: center;">
+          <div style="width: 80%; max-width: 800px;">
+            <img src="static/images/updated-barchart.png" alt="Updated SOTA bar graph" style="width: 100%; height: auto;"/>
+            <h2 class="subtitle has-text-centered">
+              Updated graph of SOTA fake localization results.
+            </h2>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- 修改后的区块 -->
+      <div class="columns is-centered" style="margin-top: 4rem;">
+        <div class="column is-10">
+          <h3 class="title is-4 mb-4">Context Enhancement Versus Enhancement Factor</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              We analyze the relationship between different enhancement factors and detection performance. Here we explore how the enhancement factor (γ) affects the detection capability of models. The enhancement factor controls how much weight is given to the context information. A higher γ value means the final prediction placing greater emphasis on contextual information during the detection process..
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="columns">
+            <!-- First image column -->
+            <div class="column is-half">
+              <figure class="image">
+                <img src="static/images/enhancement_factor_f1.png" alt="Enhancement Factor vs F1 Scores">
+                <figcaption class="has-text-centered mt-2">F1 Scores vs. Enhancement Factor (γ)</figcaption>
+              </figure>
+            </div>
+            <!-- Second image column -->
+            <div class="column is-half">
+              <figure class="image">
+                <img src="static/images/enhancement_factor_ap.png" alt="Enhancement Factor vs AP">
+                <figcaption class="has-text-centered mt-2">AP vs. Enhancement Factor (γ)</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analysis text section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content has-text-justified mt-4">
+            <p>
+              The results reveal interesting patterns in how the enhancement factor (γ) affects detection performance:
+            </p>
+            <ul>
+              <li>For F1 scores, we observe that performance improves significantly as γ increases up to 5, after which the improvement plateaus. This suggests that there is a point of diminishing returns in emphasizing context information.</li>
+              <li>For Average Precision (AP), we observe a different trend. While AP initially improves with increasing γ values, it starts to decline when γ exceeds 5. This decline can be attributed to the increased emphasis on context information leading to more false positives, which AP is more sensitive to compared to F1 score.</li>
+              <li>Based on these observations, we select γ = 5 as the optimal enhancement factor in our paper, balancing the benefits of context enhancement while avoiding the negative impact of excessive false positives that occur at higher γ values.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Results Section -->
+    <div class="columns is-centered" style="margin-top: 4rem;">
+      <div class="column is-10">
+        <h3 class="title is-4 mb-4">Context Enhancement Versus Mask Size</h3>
+        <div class="content has-text-justified mb-4">
+          <p>
+            We break down the performance of each SOTA fake detection model and their context-enhanced version by different mask sizes in our dataset. First, we sorted all images based on their mask size proportion, which represents the ratio of the manipulated area (mask) to the total image area. To ensure a balanced analysis, we divided the sorted data into 10 bins, with each bin containing an equal number of images regardless of the mask size range it covers. This equal-frequency binning strategy, rather than equal-width binning, ensures that each data point in our visualization represents the average performance (F1-score and AP) calculated from the same number of samples, making the comparison more statistically meaningful. The results are displayed in a 2×2 grid, where each subplot shows one model's performance across three methods (Oracle, Ours, and Original). The x-axis labels indicate both the bin number and its corresponding mask size proportion range, allowing us to observe how performance varies with the relative size of the manipulated region in the images.
+          </p>
+        </div>
+      </div>
+    </div>
+
+      <!-- Results Images -->
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <div id="results-carousel" class="bulma-slider results-slider">
+        <div class="item mb-6"> 
+          <h2 class="subtitle has-text-centered">
+            F1 scores across different mask sizes for various models and methods.
+          </h2>
+          <img src="static/images/f1_vs_mask_size.png" alt="F1 Score vs Mask Size"/>
+        </div>
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            Average Precision (AP) metrics across different mask sizes for various models and methods.
+          </h2>
+          <img src="static/images/ap_vs_mask_size.png" alt="AP vs Mask Size"/>
+        </div>
+
+
+
+      <div class="content has-text-justified mb-4">
+        <p>
+          There are a few notable observations from the above results:
+          <ul>
+            <li>The performance of SOTA models varies dramatically across different mask sizes. In general, smaller masks lead to more failures especially in the metrics of AP.</li>
+            <li>The performance of all models generally improves when using context enhancement.</li>
+            <li>The performance gain is more significant for smaller masks for AP.</li>
+            <li>The performance gain is more significant for models with lower detection accuracy in the original setting such as ManTraNet.</li>
+          </ul>
+        </p>
+      </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+     <!-- <div class="item"> -->
+      <!-- Your image here -->
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/> -->
+      <!-- <h2 class="subtitle has-text-centered"> -->
+        <!-- Fourth image description. -->
+      <!-- </h2> -->
+    <!-- </div> -->
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Sample PDF file</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <!-- <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

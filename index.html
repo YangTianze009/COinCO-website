@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="COinCO: A novel dataset addressing the scarcity of out-of-context examples in existing vision datasets through diffusion-based inpainting.">
+  <meta property="og:title" content="COinCO: Common Inpainted Objects In-N-Out of Context"/>
+  <meta property="og:description" content="A novel dataset of 97,722 images for context-aware visual understanding via diffusion-based inpainting."/>
+  <meta property="og:url" content="https://yangtianze009.github.io/COinCO-website/"/>
+  <meta property="og:image" content="static/images/pipeline_1-1.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="COinCO: Common Inpainted Objects In-N-Out of Context">
+  <meta name="twitter:description" content="A novel dataset of 97,722 images for context-aware visual understanding via diffusion-based inpainting.">
+  <meta name="twitter:image" content="static/images/pipeline_1-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="COinCO, context reasoning, inpainting, out-of-context detection, COCO, CVPR 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>COinCO: Common Inpainted Objects In-N-Out of Context</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Common
+              <span style="color: #BA0C2F;">Inpainted</span> Objects
+              <span style="color: #BA0C2F;">In-N-Out</span> of Context</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Tianze Yang<sup>1*</sup>,</span>
+              <span class="author-block">
+                Tyson Jordan<sup>1*</sup>,</span>
+              <span class="author-block">
+                Ruitong Sun<sup>1*</sup>,</span>
+              <span class="author-block">
+                Ninghao Liu<sup>2</sup>,</span>
+              <span class="author-block">
+                Jin Sun<sup>1</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+              <span class="author-block"><sup>1</sup>University of Georgia,</span>
+              <span class="author-block"><sup>2</sup>The Hong Kong Polytechnic University</span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
+            </div>
+
+            <div class="is-size-5 publication-authors" style="margin-top: 0.3rem;">
+              <span class="author-block" style="font-weight: bold;">CVPR 2026</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv Link -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YangTianze009/COinCO" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Dataset link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/COinCO" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+             We present Common Inpainted Objects In-N-Out of Context (COinCO), a novel dataset addressing the scarcity of out-of-context examples in existing vision datasets. By systematically replacing objects in COCO images through diffusion-based inpainting, we create 97,722 unique images featuring both contextually coherent and inconsistent scenes, enabling effective context learning. Each inpainted object is meticulously verified and categorized as in- or out-of-context through Large Vision Language Model assessments. Our analysis reveals significant patterns in semantic priors that influence inpainting success across object categories. We demonstrate three key tasks enabled by COinCO: (1) developing a fine-grained context reasoning approach that classifies objects as in- or out-of-context based on three criteria; (2) a novel Objects-from-Context prediction task that determines which new objects naturally belong in given scenes at both instance and clique levels, and (3) context-enhanced fake detection on state-of-the-art methods without fine-tuning. COinCO provides a controlled testbed with contextual variations, establishing a foundation for advancing context-aware visual understanding in computer vision and image forensics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <h2 class="title is-3">Example Images from COinCO</h2>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/4512.png" alt="Inpainted tv example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: tv</h2>
+        </div>
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/20249.png" alt="Inpainted orange example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: orange</h2>
+        </div>
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/46051.png" alt="Inpainted apple example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: apple</h2>
+        </div>
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/4511.png" alt="Inpainted backpack example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: backpack</h2>
+        </div>
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/38796.png" alt="Inpainted cow example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: cow</h2>
+        </div>
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/4382.png" alt="Inpainted suitcase example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: suitcase</h2>
+        </div>
+
+        <div class="item">
+          <div class="has-text-centered">
+            <img src="static/images/56700.png" alt="Inpainted potted plant example" style="display: inline-block;">
+          </div>
+          <h2 class="subtitle has-text-centered">Inpainted object: potted plant</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Supplementary Material -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Supplementary Material</h2>
+    <div class="columns is-centered" style="margin-top: 1rem;">
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <span class="link-block">
+              <a href="inpainting.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
+              <span class="icon"><i class="fa-solid fa-file"></i></span>
+              <span>Inpainting Procedure Details and Analysis</span>
+              </a>
+            </span>
+          </p>
+          <p>
+            <span class="link-block">
+              <a href="additional_pipeline.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
+              <span class="icon"><i class="fa-solid fa-file"></i></span>
+              <span>Additional Pipeline Results</span>
+              </a>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <span class="link-block">
+              <a href="training_details.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
+              <span class="icon"><i class="fa-solid fa-file"></i></span>
+              <span>Context Models &amp; Training Details</span>
+              </a>
+            </span>
+          </p>
+          <p>
+            <span class="link-block">
+              <a href="fake_detection_context.html" class="external-link button is-normal is-rounded is-dark" style="width: 100%; justify-content: center;">
+              <span class="icon"><i class="fa-solid fa-file"></i></span>
+              <span>Fake Detection and Context Enhancement</span>
+              </a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Supplementary Material -->
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <div style="position: relative;">
+      <button class="button is-small copy-bibtex" style="position: absolute; top: 0.5rem; right: 0.5rem; z-index: 1;">Copy</button>
+      <pre><code>@inproceedings{yang2026coinco,
+  title={Common Inpainted Objects In-N-Out of Context},
+  author={Yang, Tianze and Jordan, Tyson and Sun, Ruitong and Liu, Ninghao and Sun, Jin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}</code></pre>
+    </div>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

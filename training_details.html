@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="COinCO: Context Models and Training Details">
+  <meta property="og:title" content="COinCO — Training Details"/>
+  <meta property="og:description" content="Context models and training details for the COinCO dataset."/>
+  <meta property="og:url" content="https://yangtianze009.github.io/COinCO-website/training_details.html"/>
+  <meta name="keywords" content="COinCO, training, context models, CVPR 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>COinCO — Training Details</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <h1 class="title is-2 publication-title">Common 
+              <!-- Using hexadecimal format -->
+              <span style="color: #BA0C2F;">Inpainted</span> Objects 
+              <span style="color: #BA0C2F;">In-N-Out</span> of Context</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Tianze Yang<sup>1*</sup>,</span>
+              <span class="author-block">Tyson Jordan<sup>1*</sup>,</span>
+              <span class="author-block">Ruitong Sun<sup>1*</sup>,</span>
+              <span class="author-block">Ninghao Liu<sup>2</sup>,</span>
+              <span class="author-block">Jin Sun<sup>1</sup></span>
+            </div>
+            <div class="is-size-6 publication-authors" style="margin-top: 0.3rem;">
+              <span class="author-block"><sup>1</sup>University of Georgia,</span>
+              <span class="author-block"><sup>2</sup>The Hong Kong Polytechnic University</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
+            </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 0.3rem;">
+              <span class="author-block" style="font-weight: bold;">CVPR 2026 — Supplementary Material</span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+
+                      <span class="link-block">
+                        <a href="index.html"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fa-regular fa-file"></i>
+                        </span>
+                        <span>Back to Main Page</span>
+                      </a>
+                    </span>
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <!-- <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            This page presents the full LVLM prompt referenced in Section 3.2, followed by additional training details for the fine-grained context classification models using knowledge distillation (Section 5.1) and the Objects-from-Context prediction model (Section 5.2).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Molmo Prompt Section -->
+      <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-centered">
+              <h2 class="title is-3">LVLMs Context Reasoning Prompt</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Prompt Content (kept outside hero to preserve normal styles) -->
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-centered mb-4">
+          <p>
+            This section provides the full prompt used for generating the context reasoning results in Section 3.2, as illustrated in Figure 3 in the paper.
+          </p>
+        </div>
+      </div>
+    </div>
+
+      <div id="results-carousel" class="bulma-slider results-slider">
+        <div class="item" 
+            style="display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;">
+
+          <div style="
+            width: 85%;
+            max-width: 900px;
+            height: 520px;
+            overflow-y: auto;
+            padding: 2px 40px 30px 40px;
+            border-radius: 16px;
+            background: #fafafa;
+            border: 1px solid #e5e5e5;
+            line-height: 1.7;
+            font-size: 16px;
+            color: #333;
+            white-space: pre-wrap;
+            font-family: 'Georgia', 'Times New Roman', serif;
+
+            /* subtle shadow */
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+          ">
+
+            <!-- Optional nicer scrollbar -->
+            <style>
+            ::-webkit-scrollbar {
+              width: 10px;
+            }
+            ::-webkit-scrollbar-track {
+              background: #f0f0f0;
+              border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb {
+              background: #c2c2c2;
+              border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+              background: #a8a8a8;
+            }
+            </style>
+The object to analyze is {inpainted_object}, which is located inside the red bounding box in the image.
+
+Considering image quality is not a factor, do you think the object {inpainted_object} inside the red bounding box is in-context or out-of-context?
+
+Important: Please assume that the object {inpainted_object} inside the red bounding box genuinely exists in the scene, regardless of how realistic or natural it appears visually. Even if the object looks artificially added, poorly rendered, or unrealistic in terms of visual quality, treat it as if it is truly present in that location. Focus only on whether its presence makes contextual sense, not on its visual realism.
+
+The criteria for determining whether an object is in- or out-of-context are as follows:
+
+1. Location: Evaluate whether the object inside the red bounding box is placed in a physically and contextually reasonable position, such as being supported by a surface, on the ground, or in a plausible environment.
+  If the object is floating in the air, embedded in another object, or placed in an unusual spot, it is considered out-of-context.
+
+2. Co-occurrence: Determine whether the object inside the red bounding box can reasonably appear together with other objects in the scene.
+  If the combination of objects is unusual or uncommon in real-world contexts, it is considered out-of-context.
+
+3. Size: Judge whether the object's size inside the red bounding box is reasonable relative to other objects and the environment in this image.
+  For example, a banana larger than a chair or a cat larger than a car would be unusual and out-of-context.
+
+Important notes:
+- If the object violates ANY ONE of these three criteria (even just one), this object will be considered as out-of-context.
+- The threshold is "unusual" or "uncommon", NOT "impossible". If something is uncommon or atypical in real-world contexts, it should be considered out-of-context.
+- Each criterion is evaluated independently. Your summary judgment for each criterion must be consistent with your analysis. If you identify something as unusual, uncommon, or abnormal in your analysis for a specific criterion, then that criterion's summary MUST be marked as out-of-context. Conversely, if your analysis describes the situation as normal, common, or typical, then mark it as in-context.
+- Analyze only the object {inpainted_object} inside the red bounding box.
+- Do not reinterpret or substitute the given object with another category. Even if the object visually resembles another type, always analyze it strictly as the given object {inpainted_object}.
+- Ignore the visual quality, realism, or rendering quality of the object. Focus solely on whether its contextual presence makes sense.
+
+Please provide the analysis of the object according to all three criteria, then give a summary of each criterion, and finally provide your final decision.
+
+For example, your answer could be:
+
+Analysis:
+Location: The {new_object} inside the red bounding box is floating in mid-air without any support.
+Co-occurrence: It is unusual for a {new_object} to appear together with [other objects in the scene].
+Size: The size of this {new_object} looks normal in this environment.
+
+Summary:
+Location: Out-of-context
+Co-occurrence: Out-of-context
+Size: In-context
+Final decision: Out-of-context.
+
+Or your answer could be:
+
+Analysis:
+Location: The {inpainted_object} inside the red bounding box is normally placed on the ground/surface.
+Co-occurrence: A {inpainted_object} commonly appears together with [other objects in the scene].
+Size: The {inpainted_object} looks proportionally normal in this environment.
+
+Summary:
+Location: In-context
+Co-occurrence: In-context
+Size: In-context
+Final decision: In-context.
+
+Your answer is:
+          </div>
+
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Context Reasoning Prompt (Scrollable)
+          </h2>
+
+        </div>
+      </div>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Main Title section -->
+      <div class="columns is-centered">
+        <h2 class="title is-3">Training Details and Model Structure</h2>
+      </div>
+
+      <!-- In and Out of Context Model Section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h3 class="title is-4 mb-4">Fine-Grained Context Classification</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              This section provides supplementary information for Section 5.1, detailing the knowledge distillation process and training specifications for our fine-grained context classification models. We distill a large 72B parameter teacher model into three efficient 3B student models, each specialized for a specific context criterion: location, size, and co-occurrence.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Training Details Section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h4 class="title is-5 mb-3">Training Details</h4>
+          <div class="content" style="text-align: justify; margin-bottom: 2rem;">
+            <p>
+              To address the challenge of deploying large vision-language models for practical applications, we employ knowledge distillation to transfer contextual reasoning capabilities from a large teacher model to smaller, more efficient student models. We use <strong>Qwen2.5-VL-72B</strong> as our teacher model to distill knowledge into three independent <strong>Qwen2.5-VL-3B</strong> student models—one specialized for <strong>location</strong> reasoning, one for <strong>size</strong> reasoning, and one for <strong>co-occurrence</strong> reasoning.
+            </p>
+            
+            <p>
+              This distillation process reduces the model size by <strong>24×</strong> while maintaining most of the reasoning capabilities, making context classification feasible for practical deployment. Each student model learns not only the final decision (in-context or out-of-context) but also the reasoning process for its specific criterion, enabling interpretable explanations.
+            </p>
+
+            <p>
+              <strong>Dataset Split:</strong> We use 73,929 images with unanimous consensus from all three LVLMs (Molmo-72B, Qwen2.5-VL-72B, and InternVL3.5-38B). From these, we sample 24,000 images maintaining a balanced 1:1 ratio of in-context to out-of-context examples:
+            </p>
+            
+            <ul>
+              <li><strong>Training set:</strong> 20,000 images</li>
+              <li><strong>Validation set:</strong> 2,000 images</li>
+              <li><strong>Test set:</strong> 2,000 images</li>
+            </ul>
+
+            <p>
+              We use context reasoning responses from Qwen2.5-VL-72B as the ground truth for training. The three student models are trained independently, with each focusing on one of the three context criteria:
+            </p>
+            
+            <ol>
+              <li><strong>Location Student Model:</strong> Evaluates whether the spatial placement of the object is appropriate for the scene layout. Learns to identify violations such as objects appearing in physically impossible locations (e.g., a horse in a bathroom next to urinals).</li>
+              <li><strong>Size Student Model:</strong> Assesses whether the object's scale aligns with scene geometry and expected proportions. Detects anomalies like unreasonably sized objects (e.g., a tiny zebra on a beach next to a person).</li>
+              <li><strong>Co-occurrence Student Model:</strong> Determines whether the object's simultaneous presence with existing objects is contextually plausible. Identifies violations where objects that absolutely cannot appear together are present (e.g., a cow in the sky with the moon).</li>
+            </ol>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Model Architecture Note -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h4 class="title is-5 mb-3">Model Architecture</h4>
+          <div class="content" style="text-align: justify; margin-bottom: 2rem;">
+            <p>
+              Each of the three student models is based on the <strong>Qwen2.5-VL-3B</strong> architecture, a compact yet powerful vision-language model. Through knowledge distillation from the 72B parameter teacher model, these 3B student models achieve practical inference speeds while maintaining high-quality reasoning capabilities. The modular design allows criterion-specific refinements, demonstrating that complex contextual understanding can be effectively decomposed into focused reasoning tasks.
+            </p>
+            <p>
+              While the 72B teacher model is too slow for practical deployment, these efficient 3B student models make context reasoning feasible for real-world applications. Each model provides interpretable natural language explanations for its decisions, enabling transparent and understandable context classification.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spacer between sections -->
+      <div style="margin-top: 4rem;"></div>
+      <!-- Original Object Recovery Model Section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h3 class="title is-4 mb-4">Objects-from-Context Prediction Model</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              This section provides supplementary information for Section 5.2, detailing the training process and architectural specifications of our object recovery model. The following content includes comprehensive training parameters, model architecture, and resource utilization statistics.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Training Details Section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h4 class="title is-5 mb-3">Training Details</h4>
+          <div class="content" style="text-align: justify; margin-bottom: 2rem;">
+            <p>
+              The training process involved optimizing an 80-class classification model with embeddings as inputs. Each input embedding consisted of two components: <code>latent1</code> and <code>latent2</code>, both of size 4 × 32 × 32, extracted using the VAE module from the <code>stable-diffusion-2-1</code> model. These embeddings were generated from corresponding image and mask pairs and served as the input to the model.
+            </p>
+            <p>
+              We utilized a learning rate of 10<sup>-3</sup> and an Adam optimizer for training. The batch size was set to 512 to ensure efficient utilization of GPU memory. A step learning rate scheduler was applied with a step size of 40 epochs and a decay factor of 0.1. The model was trained for 120 epochs on a single A6000 GPU, and Cross-Entropy loss was used as the optimization objective.
+            </p>
+            <p>
+              The classification task involved 80 classes, and the network architecture was designed to process the 4 × 32 × 32 embeddings efficiently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model Details Section -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h4 class="title is-5 mb-5">Model Details</h4>
+        </div>
+      </div>
+
+      <!-- Main container for centering everything -->
+      <div style="display: flex; justify-content: center; width: 100%;">
+        <!-- Image container with side-by-side layout -->
+        <div class="columns is-centered" style="max-width: 1200px;">
+          <!-- First image column -->
+          <div class="column is-5 is-flex is-justify-content-center">
+            <div class="card" style="width: 100%;">
+              <!-- Image wrapper -->
+              <div class="card-image" style="background-color: #f5f5f5;">
+                <figure class="image" style="height: 400px;">
+                  <img src="static/images/recovery_model_1.jpg" alt="MY ALT TEXT" 
+                       style="height: 100%; width: 100%; object-fit: contain;"/>
+                </figure>
+              </div>
+              <!-- Description section -->
+              <div class="card-content">
+                <h2 class="subtitle has-text-centered">
+                  Layer Summary.
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second image column -->
+          <div class="column is-5 is-flex is-justify-content-center">
+            <div class="card" style="width: 100%;">
+              <!-- Image wrapper -->
+              <div class="card-image" style="background-color: #f5f5f5;">
+                <figure class="image" style="height: 400px;">
+                  <img src="static/images/recovery_model_2.jpg" alt="MY ALT TEXT" 
+                       style="height: 100%; width: 100%; object-fit: contain;"/>
+                </figure>
+              </div>
+              <!-- Description section -->
+              <div class="card-content">
+                <h2 class="subtitle has-text-centered">
+                  Parameters and Memory Usage.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+  
+  
+      <!-- <div class="item"> -->
+        <!-- <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item"> -->
+
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Sample PDF file</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <!-- <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
